@@ -1,0 +1,43 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Task Instructions
+
+{% endblock %}
+
+
+{% block content %}
+    <hr>
+
+
+<div class="card bg-light instructions" id="step_1">
+    <div class="card-body">
+    <p>
+        During the experiment, you will be asked to count letters. You have to count <strong>how many</strong> times the letter “<strong>a</strong>“
+        appears in a sequence of characters.
+    </p>
+    <p>
+        On the next screen you will have the opportunity to try the task five times. You will face sequences of various lengths to get a good impression of the task.
+        To submit an answer, hit the <span class="badge badge-info"> ⏎ Enter</span> key.
+        If your answer is correct, the next sequence is displayed. Otherwise, the same sequence is displayed again and you can submit another answer.
+        The timer in blue above each sequence indicates for how long you have been counting the "a"s of the <strong>current sequence</strong>.
+        This timer will restart with every new sequence of characters.
+        The yellow timer next to the input field indicates how long you needed to solve the <strong>previous sequence</strong>.
+    </p>
+    <p>
+        On the next screen you will find an annotated tour that shows where you can find all the relevant information elements (Timers, Sequence and Input Field).
+    </p>
+        <br>
+        Do you have any questions?
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}

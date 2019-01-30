@@ -1,0 +1,63 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block styles %}
+    <link href="{% static "Tullock_Income_Intro/css/Round.css" %}" rel="stylesheet">
+    <link href="{% static "Tullock_Income_Intro/css/bootstrap-tour-standalone.min.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Trial Round
+{% endblock %}
+
+{% block content %}
+<hr>
+
+<div class="done_text" id="done_text">
+</div>
+
+<div class="jumbotron">
+
+<span class="badge badge-primary" data-toggle="tooltip" data-placement="top" title="Time spent on solving current sequence" id="step_1" style="font-size:13px" >
+    <!-- uncomment the next line for timer in clock format -->
+<!--<span id="min">00</span>:<span id="sec">00</span>-->
+    <span id="sec">0</span> sec
+</span>
+
+<div id="string">
+</div>
+
+<br>
+
+<input type="number" id="player_guess" size="4" autofocus>
+</input> <span class="badge badge-warning"  data-toggle="tooltip" data-placement="bottom" title="Seconds needed to solve the previous sequence" style="font-size:19px" > <span id="time_last"> 0 </span> sec</span>
+
+
+<br>
+
+<input type="hidden" name="output_trial" id="id_output_trial"/>
+
+
+
+
+</div>
+<div class="next_container">
+    <input class="d-none btn btn-primary btn-large btn-primary" id="next-button" type="submit" value="Continue">
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'Tullock_Income_Intro/js/Round0.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Tullock_Income_Intro/js/bootstrap-tour-standalone.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Tullock_Income_Intro/js/Tour-Trial.js' %}"></script>
+
+<script>
+//this initiates the tooltip mouseover to explain the counters
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//
+
+</script>
+{% endblock %}

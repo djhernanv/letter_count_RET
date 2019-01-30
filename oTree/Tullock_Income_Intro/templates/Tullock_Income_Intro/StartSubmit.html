@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Start Confirmation
+{% endblock %}
+
+{% block content %}
+<hr>
+
+    <div class="jumbotron">
+    {% if subsession.round_number == 1 %}
+    <p>From the next screen onwards you will have the opportunity to earn money
+        as explained on the screens before.
+        {% else %}
+        In the next screen you will have the opportunity to earn money as explained in the screens before.
+    {% endif %}
+    </p>
+    <h1>Are you ready to start?</h1>
+        <p>
+            Pressing the <span class="badge badge-danger">Start</span> button will start the letter counting task.
+        </p>
+        <br>
+        <br>
+        <br>
+    <button class="btn btn-danger btn-block">Start</button>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load otree staticfiles %}
+
+<div class="card">
+    <div class="card-header bg-default mb-3"> Instructions </div>
+    <div class="card-body">
+    <p>
+        Your task is to count how many <strong> "a" </strong>s there are in the sequence of characters currently displayed.
+    </p>
+    <p>
+        Per correctly solved sequence you will get <strong>{{ Constants.tokensper_string }} Token</strong>.
+        In the <strong> switch mode </strong> you will get 0.1 Tokens per second ( = 1 Token per {{ Constants.secondsper_token }} seconds).
+    </p>
+    <p>
+        <strong>This round lasts {{ Constants.time_in_minutes|floatformat:0 }} Minutes.</strong>
+    </p>
+    </div>
+</div>

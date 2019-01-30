@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block title %}
+    Feedback Letter Counting Task
+{% endblock %}
+
+{% block content %}
+
+<hr>
+
+<div class="card">
+  <div class="card-header text-white bg-secondary mb-3">Your earnings in this round
+      (piece rate: {{ Constants.tokensper_string|floatformat:1 }} Tk per sequence)
+      :</div>
+  <div class="card-body">
+      <p>
+    You solved {{ player.production_strings|floatformat:0 }} sequences and thus earned <strong>{{ player.income_strings_gross|c|floatformat:1 }}</strong> Tokens.<br>
+    You spent {{player.time_in_switch}} seconds in the <em>switch mode</em> and therefore earned <strong>{{player.income_in_switch|c|floatformat:1}}</strong> Tokens.<br><br>
+    Your total earnings in this round are hence <strong>{{player.net_income|c|floatformat:1}}</strong> Tokens. <br>
+      </p>
+
+  </div>
+</div>
+
+    <br>
+<br>
+
+{% next_button %}
+
+{% endblock %}
